@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="nex-page.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Overpass:wght@700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@1,300&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div class="rating-box">
+        <div><img src="illustration-thank-you.svg" alt="thank u"></div>
+        <div class="select">You Selected <span id="selected-rating"></span> out of 5</div>
+        <h1>Thank you !</h1>
+        <div class="write-up"><p>we appreciate you taking the time to give a rating <br>
+        if you ever need more support, don't hesitate to <br>
+    get in touch!</p></div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+  // Retrieve the selected rating from local storage
+  const selectedRating = localStorage.getItem("selectedRating");
+
+  // Display the selected rating on the page
+  const ratingElement = document.getElementById("selected-rating");
+  ratingElement.textContent = selectedRating;
+});
+    </script>
+</body>
+</html>
